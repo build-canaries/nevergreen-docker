@@ -1,14 +1,13 @@
-FROM ubuntu:14.04.1
+FROM debian:wheezy
 USER root
 MAINTAINER Build Canaries
 
-RUN apt-get -y install software-properties-common
-RUN add-apt-repository -y ppa:webupd8team/java
-RUN apt-get -y update
+RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee /etc/apt/sources.list.d/webupd8team-java.list
+RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
 
-RUN echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
-RUN echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
+RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886
+RUN apt-get update
 RUN apt-get -y install oracle-java8-installer
 
-RUN wget https://github.com/build-canaries/nevergreen/releases/download/v0.5.0/nevergreen-standalone.jar
+RUN wget --no-check-certificate https://github.com/build-canaries/nevergreen/releases/download/v0.5.0/nevergreen-standalone.jar
 CMD ["java", "-jar", "nevergreen-standalone.jar"]
