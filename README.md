@@ -1,8 +1,20 @@
-# About this Repo
+# Nevergreen Docker image
 
-This is the Git repo of the official Docker image for nevergreen. See the
-Hub page for the full readme on how to use the Docker image and for information
-regarding contributing and issues.
+# What is Nevergreen?
 
-The full readme is generated over in [docker-library/docs](https://github.com/docker-library/docs),
-specificially in [docker-library/docs/nevergreen](https://github.com/docker-library/docs/tree/master/nevergreen).
+This is the official nevergreen docker image. Nevergreen is a build monitor with attitude. It is awesome for two reasons:
+
+-	Your builds should always be green. Nevergreen understands this and only shows you jobs that have failed or are building.
+-	Nevergreen uses HTML localStorage. So the config is stored in your web browser. You only need to run it once to host hundreds of different build monitors.
+
+# How to use this image
+
+## Run the image - With Authentication for CI
+
+	docker run -d -p [host-port]:5000 -e "AES_KEY=your-key" nevergreen 
+
+## Run the image - Without Authentication for CI
+
+	docker run -d -p [host-port]:5000 nevergreen 
+
+This starts up nevergreen on http://localhost:[host-port\]
