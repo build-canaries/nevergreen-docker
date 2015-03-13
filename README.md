@@ -13,10 +13,10 @@ For more info visit https://github.com/build-canaries/nevergreen
 
 ## Run the image - With Authentication for CI
 
-	docker run -d -p [host-port]:5000 -e "AES_KEY=your-key" nevergreen 
+	docker run -d -p [host-port]:5000 -e "AES_KEY=your-key" buildcanariesteam/nevergreen 
 
 ## Run the image - Without Authentication for CI
 
-	docker run -d -p [host-port]:5000 nevergreen 
+	docker run -d -p [host-port]:5000 buildcanariesteam/nevergreen 
 
 This starts up nevergreen on http://localhost:[host-port\]
