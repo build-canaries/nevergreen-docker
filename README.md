@@ -14,6 +14,10 @@ For more info visit https://github.com/build-canaries/nevergreen
 
 This starts up Nevergreen on http://localhost:[host-port\]
 
+### Running a specific version
+
+    docker run -d -p [host-port]:5000 buildcanariesteam/nevergreen:v0.10.0
+
 ### Variables
 
 - **AES_KEY**: Used to encrypt passwords can be set using `-e "AES_KEY=your-key"`
