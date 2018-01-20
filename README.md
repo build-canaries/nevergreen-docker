@@ -10,13 +10,13 @@ For more info visit [Nevergreen on GitHub](https://github.com/build-canaries/nev
 
 ### Running
 
-    docker run -d -p [host-port]:5000 buildcanariesteam/nevergreen 
+    docker run -d -p ${host-port}:5000 buildcanariesteam/nevergreen 
 
-This starts up Nevergreen on http://localhost:\[host-port]
+This starts up Nevergreen on http://localhost:${host-port}
 
 ### Running a specific version
 
-    docker run -d -p [host-port]:5000 buildcanariesteam/nevergreen:v0.10.0
+    docker run -d -p ${host-port}:5000 buildcanariesteam/nevergreen:v0.10.0
 
 ### Variables
 
