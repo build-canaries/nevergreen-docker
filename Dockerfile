@@ -1,9 +1,8 @@
-FROM java:8-jre
+FROM openjdk:8-jre-alpine
 
-MAINTAINER Manasi Kulkarni <mkulkarn@thoughtworks.com>, Stephen Cowley <ste@thoughtworks.com>, Joe Wright <joe@joejag.com>
+MAINTAINER Manasi Kulkarni <mkulkarn@thoughtworks.com>, Stephen Cowley <ste@thoughtworks.com>, Joe Wright <joe@joejag.com>, Christopher Martin
 
-# Get the latest release
-RUN wget $( curl https://api.github.com/repos/build-canaries/nevergreen/releases/latest | grep browser_download_url | head -n 1 | cut -d '"' -f 4 )
+RUN wget https://github.com/build-canaries/nevergreen/releases/download/v1.0.0/nevergreen-standalone.jar
 
 EXPOSE 5000
 

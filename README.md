@@ -1,10 +1,10 @@
-# Nevergreen Docker image
+# Nevergreen Docker
 
 This is the official Nevergreen Docker image.
 
 ## What is Nevergreen?
 
-For more info visit https://github.com/build-canaries/nevergreen
+For more info visit [Nevergreen on GitHub](https://github.com/build-canaries/nevergreen).
 
 ## How to use this image
 
@@ -12,7 +12,7 @@ For more info visit https://github.com/build-canaries/nevergreen
 
     docker run -d -p [host-port]:5000 buildcanariesteam/nevergreen 
 
-This starts up Nevergreen on http://localhost:[host-port\]
+This starts up Nevergreen on http://localhost:\[host-port]
 
 ### Running a specific version
 
