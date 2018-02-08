@@ -18,6 +18,12 @@ This starts up Nevergreen on http://localhost:${host-port}
 
     docker run -d -p ${host-port}:5000 buildcanariesteam/nevergreen:v0.10.0
 
+### Running latest unstable version
+
+We create images while we are updating features. You can access these features before an official release.
+
+    docker run -d -p ${host-port}:5000 buildcanariesteam/nevergreen:staging
+
 ### Variables
 
 - **AES_KEY**: Used to encrypt passwords can be set using `-e "AES_KEY=your-key"`
