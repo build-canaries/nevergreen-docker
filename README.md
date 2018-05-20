@@ -1,3 +1,7 @@
+# This repo is no longer maintained
+
+This repo has been **deprecated** as the Dockerfile has been added directly to the [Nevergreen](https://github.com/build-canaries/nevergreen) repo.
+
 # Nevergreen Docker
 
 This is the official Nevergreen Docker image.
